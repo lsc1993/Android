@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GoGoSport</string>
+
+    <!--欢迎页-->
+    <string name="splash_tip">GoGoSport</string>
+    <string name="splash_welcome_tip">让运动更自由</string>
+
+    <!--运动主页-->
+    <string name="sport_title">跑步</string>
+    <string name="sport_second_title">坚持跑步</string>
+    <string name="sport_declaration">来提高身体免疫力</string>
+</resources>

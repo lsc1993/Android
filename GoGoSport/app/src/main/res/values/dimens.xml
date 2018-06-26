@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--字体大小-->
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="text_size_middle">22sp</dimen>
+    <dimen name="text_size_small">20sp</dimen>
+    <dimen name="text_size_smaller">18sp</dimen>
+    <dimen name="text_size_smallest">16sp</dimen>
+    <!--主页尺寸-->
+    <dimen name="map_image_width">30dp</dimen>
+    <dimen name="map_image_height">30dp</dimen>
+    <dimen name="setting_image_width">30dp</dimen>
+    <dimen name="setting_image_height">30dp</dimen>
+    <!--主页字体大小-->
+    <dimen name="main_sport_second_title">14sp</dimen>
+    <!--通用尺寸-->
+    <dimen name="common_1_dp">1dp</dimen>
+    <dimen name="common_2_dp">2dp</dimen>
+    <dimen name="common_3_dp">3dp</dimen>
+    <dimen name="common_4_dp">4dp</dimen>
+    <dimen name="common_5_dp">5dp</dimen>
+    <dimen name="common_6_dp">6dp</dimen>
+    <dimen name="common_7_dp">7dp</dimen>
+    <dimen name="common_8_dp">8dp</dimen>
+    <dimen name="common_9_dp">9dp</dimen>
+    <dimen name="common_10_dp">10dp</dimen>
+    <dimen name="common_11_dp">11dp</dimen>
+    <dimen name="common_12_dp">12dp</dimen>
+    <dimen name="common_13_dp">13dp</dimen>
+    <dimen name="common_14_dp">14dp</dimen>
+    <dimen name="common_15_dp">15dp</dimen>
+    <dimen name="common_16_dp">16dp</dimen>
+    <dimen name="common_17_dp">17dp</dimen>
+    <dimen name="common_18_dp">18dp</dimen>
+    <dimen name="common_19_dp">19dp</dimen>
+    <dimen name="common_30_dp">30dp</dimen>
+    <dimen name="common_50_dp">50dp</dimen>
+    <dimen name="common_100_dp">100dp</dimen>
+</resources>
