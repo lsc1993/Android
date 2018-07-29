@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TitleBar">
+        <attr name="showTitle" format="boolean"/>
+        <attr name="showBackBtn" format="boolean"/>
+        <attr name="showShareBtn" format="boolean"/>
+    </declare-styleable>
+</resources>

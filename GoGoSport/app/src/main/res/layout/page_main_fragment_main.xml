@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".main.mainpage.MainPageFragment">
+
+    <include
+        android:id="@+id/title_container"
+        layout="@layout/page_common_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/second_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_15_dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_container">
+
+        <ImageView
+            android:id="@+id/history_image_btn"
+            android:layout_width="@dimen/map_image_width"
+            android:layout_height="@dimen/map_image_height"
+            android:layout_marginLeft="@dimen/common_15_dp"
+            android:contentDescription="@string/sport_second_title"
+            android:src="@drawable/main_page_history_btn" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/sport_second_title"
+            android:textSize="@dimen/main_sport_second_title" />
+
+        <ImageView
+            android:id="@+id/settting_image_btn"
+            android:layout_width="@dimen/map_image_width"
+            android:layout_height="@dimen/map_image_height"
+            android:layout_marginRight="@dimen/common_15_dp"
+            android:contentDescription="@string/sport_second_title"
+            android:src="@drawable/main_page_setting_btn" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_20_dp"
+        android:gravity="center"
+        android:text="@string/sport_declaration"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second_title_container" />
+
+    <ImageView
+        android:id="@+id/run_people_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_10_dp"
+        android:layout_marginRight="@dimen/common_10_dp"
+        android:layout_marginTop="@dimen/common_30_dp"
+        android:contentDescription="@string/main_page_run_image_desc"
+        android:scaleType="fitXY"
+        android:src="@drawable/main_page_run_people_img"
+        android:elevation="@dimen/common_4_dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+    <Button
+        android:id="@+id/start_run_btn"
+        android:layout_width="@dimen/main_page_start_run_btn_width"
+        android:layout_height="@dimen/main_page_start_run_btn_height"
+        android:layout_marginTop="@dimen/common_30_dp"
+        android:background="@drawable/main_page_start_run_btn_bg"
+        android:text="@string/main_page_start_run"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_smaller"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/run_people_img" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_30_dp"
+        android:text="@string/main_page_wonderful_day"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_run_btn" />
+
+</android.support.constraint.ConstraintLayout>

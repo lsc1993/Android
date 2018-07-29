@@ -1,20 +1,19 @@
 package com.ls.gogosport.splash;
 
 import android.content.Intent;
-import android.nfc.Tag;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 
-import com.ls.gogosport.MainActivity;
+import com.ls.gogosport.main.MainActivity;
 import com.ls.gogosport.R;
+import com.ls.gogosport.util.StatusBarUtil;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 /**
  * Splash 欢迎页
+ * 用于初始化资源以及现实欢迎页面
  *
  * @author liushuang 2018-06-36
  */
@@ -25,7 +24,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
+        StatusBarUtil.setStatusBarTranslucent(this);
     }
 
     @Override
@@ -35,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     /**
-     * 启动MainActivity
+     * 启动MainActivity,延迟1500mills
      */
     private void startMainActivity() {
         Timer timer = new Timer();

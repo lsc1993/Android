@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.preference.PreferenceCategory
+        android:title="@string/setting_title">
+
+        <android.support.v7.preference.CheckBoxPreference
+            android:defaultValue="true"
+            android:key="setting_speak_switch"
+            android:summary="@string/setting_speak_switch_summary"
+            android:title="@string/setting_speak_switch_title" />
+
+        <android.support.v7.preference.ListPreference
+            android:defaultValue="15"
+            android:dependency="setting_speak_switch"
+            android:dialogTitle="@string/setting_speak_rate_title"
+            android:entries="@array/setting_speak_interval_preference"
+            android:entryValues="@array/setting_speak_interval_preference_values"
+            android:key="setting_speak_rate"
+            android:summary="@string/setting_speak_rate_summary"
+            android:title="@string/setting_speak_rate_title" />
+
+        <MultiSelectListPreference
+            android:dependency="setting_speak_switch"
+            android:dialogTitle="@string/setting_speak_type_title"
+            android:entries="@array/setting_speak_type_preference"
+            android:entryValues="@array/setting_speak_type_preference_values"
+            android:key="setting_speak_type"
+            android:summary="@string/setting_speak_type_summary"
+            android:title="@string/setting_speak_type_title" />
+
+    </android.support.v7.preference.PreferenceCategory>
+
+</android.support.v7.preference.PreferenceScreen>

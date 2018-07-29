@@ -9,4 +9,51 @@
     <string name="sport_title">跑步</string>
     <string name="sport_second_title">坚持跑步</string>
     <string name="sport_declaration">来提高身体免疫力</string>
+    <string name="main_page_run_image_desc">跑步</string>
+    <string name="main_page_start_run">开始跑步</string>
+    <string name="main_page_wonderful_day">Wonderful Day</string>
+
+    <!--设置页面-->
+    <string name="setting_title">设置</string>
+    <string name="setting_speak_switch_title">语音播报</string>
+    <string name="setting_speak_switch_summary">开启语音播报功能</string>
+    <string name="setting_speak_rate_title">播报频率</string>
+    <string name="setting_speak_rate_summary">选择语音播报频率</string>
+    <string name="setting_speak_type_title">播报类型</string>
+    <string name="setting_speak_type_summary">选择播报的内容</string>
+
+    <string-array name="setting_speak_interval_preference">
+        <item>15 秒</item>
+        <item>30 秒</item>
+        <item>45 秒</item>
+        <item>60 秒</item>
+        <item>100 秒</item>
+        <item>120 秒</item>
+    </string-array>
+    <string-array name="setting_speak_interval_preference_values">
+        <item>15</item>
+        <item>30</item>
+        <item>45</item>
+        <item>60</item>
+        <item>100</item>
+        <item>120</item>
+    </string-array>
+
+    <string-array name="setting_speak_type_preference">
+        <item>时长</item>
+        <item>配速</item>
+        <item>里程</item>
+        <item>步数</item>
+        <item>卡路里</item>
+    </string-array>
+    <string-array name="setting_speak_type_preference_values">
+        <item>time</item>
+        <item>speed</item>
+        <item>mileage</item>
+        <item>step</item>
+        <item>calorie</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
