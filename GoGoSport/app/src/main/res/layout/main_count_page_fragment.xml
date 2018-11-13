@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.mainpage.CountPageFragment">
+
+    <LinearLayout
+        android:id="@+id/count_step_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/count_step_page_counter_margin_top"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/count_step_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/count_step_page_text_color"
+            android:textSize="@dimen/count_step_page_step_value_size"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/count_step_page_step_text"
+            android:textSize="@dimen/count_step_page_step_text_size"
+            android:textColor="@color/count_step_page_unit_text_color"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/count_mile_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/count_step_page_common_margin_top"
+        app:layout_constraintWidth_percent="0.333"
+        app:layout_constraintTop_toBottomOf="@+id/count_step_container"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+            android:id="@+id/count_mile_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/count_step_page_text_color"
+            android:textSize="@dimen/count_step_page_common_value_size"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/count_step_page_mile_text"
+            android:textColor="@color/count_step_page_unit_text_color"
+            android:textSize="@dimen/count_step_page_common_text_size"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/count_calorie_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/count_step_page_common_margin_top"
+        app:layout_constraintWidth_percent="0.333"
+        app:layout_constraintTop_toBottomOf="@+id/count_step_container"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+            android:id="@+id/count_calorie_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/count_step_page_text_color"
+            android:textSize="@dimen/count_step_page_common_value_size"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/count_step_page_calorie_text"
+            android:textColor="@color/count_step_page_unit_text_color"
+            android:textSize="@dimen/count_step_page_common_text_size"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/count_time_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/count_step_page_common_margin_top"
+        app:layout_constraintWidth_percent="0.333"
+        app:layout_constraintTop_toBottomOf="@+id/count_step_container"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/count_time_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/count_step_page_text_color"
+            android:textSize="@dimen/count_step_page_common_value_size"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/count_step_page_time_text"
+            android:textColor="@color/count_step_page_unit_text_color"
+            android:textSize="@dimen/count_step_page_common_text_size"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
