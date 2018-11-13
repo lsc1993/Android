@@ -5,13 +5,28 @@
     <string name="splash_tip">GoGoSport</string>
     <string name="splash_welcome_tip">让运动更自由</string>
 
+    <!--主页tab-->
+    <string name="main_page_count_step_tab">步数</string>
+    <string name="main_page_sport_tab">运动</string>
+    <string name="main_page_user_tab">个人中心</string>
+
+    <!--计步页面-->
+    <string name="count_step_page_title">今日步数</string>
+    <string name="count_step_page_step_text">步</string>
+    <string name="count_step_page_mile_text">千米</string>
+    <string name="count_step_page_calorie_text">千卡</string>
+    <string name="count_step_page_time_text">步行时间</string>
+
     <!--运动主页-->
-    <string name="sport_title">跑步</string>
+    <string name="sport_page_title">跑步</string>
     <string name="sport_second_title">坚持跑步</string>
     <string name="sport_declaration">来提高身体免疫力</string>
     <string name="main_page_run_image_desc">跑步</string>
     <string name="main_page_start_run">开始跑步</string>
     <string name="main_page_wonderful_day">Wonderful Day</string>
+
+    <!--个人中心页面-->
+    <string name="user_center_page_title">个人中心</string>
 
     <!--设置页面-->
     <string name="setting_title">设置</string>
