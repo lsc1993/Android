@@ -27,6 +27,11 @@
 
     <!--个人中心页面-->
     <string name="user_center_page_title">个人中心</string>
+    <string-array name="user_center_menu_items">
+        <item>1:个人中心:gone:user_center_user_message_icon</item>
+        <item>2:偏好设置:gone:user_center_preference_icon</item>
+        <item>3:说明:gone:user_center_instruction_icon</item>
+    </string-array>
 
     <!--设置页面-->
     <string name="setting_title">设置</string>
@@ -68,7 +73,4 @@
         <item>step</item>
         <item>calorie</item>
     </string-array>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

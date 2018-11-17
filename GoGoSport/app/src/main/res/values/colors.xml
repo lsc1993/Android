@@ -4,25 +4,32 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <!--通用颜色-->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
     <!--欢迎页-->
     <color name="splash_background">#0b1013</color>
     <color name="splash_text_color">#6a4028</color>
     <color name="splash_text_tip_color">#563f2e</color>
 
-    <!--计步页面-->
-    <color name="count_step_page_text_color">#0b1013</color>
-    <color name="count_step_page_unit_text_color">#8a8a8a</color>
-
     <!--TitleBar-->
     <color name="main_page_start_run_btn_bg">#5dac81</color>
     <color name="title_bar_bg">#00896c</color>
-
-    <!--通用颜色-->
-    <color name="white">#ffffff</color>
-    <color name="black">#000000</color>
 
     <!--主页tab-->
     <color name="main_page_tan_text_selected_color">#1296db</color>
     <color name="main_page_tan_text_unselected_color">#8a8a8a</color>
     <color name="main_page_tab_bg_color">#ffffff</color>
+
+    <!--计步页面-->
+    <color name="count_step_page_text_color">#0b1013</color>
+    <color name="count_step_page_unit_text_color">#8a8a8a</color>
+
+    <!--个人中心-->
+    <color name="user_center_menu_title_text_color">#1C2833</color>
+    <color name="user_center_menu_sub_title_text_color">#B3B6B7</color>
+    <color name="user_center_divider_color">#E5E7E9</color>
+    <color name="user_center_menu_item_pressed">#ECF0F1</color>
+    <color name="user_center_menu_item_unpressed">#ffffff</color>
 </resources>

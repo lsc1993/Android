@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/user_center_menu_item_height"
+    android:background="@drawable/user_center_menu_item_selector"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/user_center_menu_img"
+        android:layout_width="@dimen/user_center_menu_icon_width"
+        android:layout_height="@dimen/user_center_menu_icon_height"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/common_20_dp"
+        android:src="@drawable/user_center_user_message_icon"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:id="@+id/user_center_menu_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/user_center_menu_img"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="@dimen/user_center_title_margin_left"
+        android:text="个人信息"
+        android:textSize="@dimen/user_center_menu_title_text_size"
+        android:textColor="@color/user_center_menu_title_text_color"/>
+
+    <TextView
+        android:id="@+id/user_center_menu_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/user_center_menu_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="@dimen/user_center_title_margin_left"
+        android:text="个人信息"
+        android:textSize="@dimen/user_center_menu_sub_title_text_size"
+        android:textColor="@color/user_center_menu_sub_title_text_color"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/user_center_menu_right_arrow"
+        android:layout_width="@dimen/user_center_menu_icon_width"
+        android:layout_height="@dimen/user_center_menu_icon_height"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="@dimen/common_20_dp"
+        android:src="@drawable/user_center_right_arrow"
+        android:scaleType="fitCenter"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_1_dp"
+        android:background="@color/user_center_divider_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="@dimen/common_5_dp"
+        android:layout_marginRight="@dimen/common_5_dp"/>
+
+</android.support.constraint.ConstraintLayout>
