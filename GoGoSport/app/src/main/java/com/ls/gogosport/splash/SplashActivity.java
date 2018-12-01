@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import com.ls.gogosport.main.MainActivity;
 import com.ls.gogosport.R;
+import com.ls.gogosport.util.LogUtil;
 import com.ls.gogosport.util.StatusBarUtil;
 
 import java.util.Timer;
@@ -37,6 +38,7 @@ public class SplashActivity extends AppCompatActivity {
      * 启动MainActivity,延迟1500mills
      */
     private void startMainActivity() {
+        LogUtil.d(TAG, "startMainActivity");
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override

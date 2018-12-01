@@ -1,5 +1,9 @@
 package com.ls.gogosport.main;
 
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.os.IBinder;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,9 +20,13 @@ import com.ls.gogosport.R;
 import com.ls.gogosport.main.mainpage.CountPageFragment;
 import com.ls.gogosport.main.mainpage.SportPageFragment;
 import com.ls.gogosport.main.mainpage.UserPageFragment;
+import com.ls.gogosport.main.service.CountStepService;
+import com.ls.gogosport.util.LogUtil;
 import com.ls.gogosport.util.StatusBarUtil;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private static final String TAG = "MainActivity";
 
     private RelativeLayout countTab;
     private RelativeLayout sportTab;
@@ -42,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String sportPageTitle;
     private String userPageTitle;
 
+    private OnCountStepChanged countStepChanged;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fragmentManager = getSupportFragmentManager();
         initPage();
         initView();
+        initCountStepService();
     }
 
     /**
@@ -79,6 +90,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //初始化选中状态
         setTabStatus(true, false, false);
+    }
+
+    private void initCountStepService() {
+        Intent intent = new Intent(this, CountStepService.class);
+        startService(intent);
+        bindService(intent, serviceConnection, BIND_AUTO_CREATE);
     }
 
     private void initTitleBar() {
@@ -119,6 +136,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         FragmentTransaction ft = fragmentManager.beginTransaction();
         ft.replace(R.id.page_fragment_container, page);
         ft.commit();
+    }
+
+    @Override
+    public void onAttachFragment(android.app.Fragment fragment) {
+        super.onAttachFragment(fragment);
+        if (fragment instanceof OnCountStepChanged) {
+            countStepChanged = (OnCountStepChanged) fragment;
+        }
     }
 
     @Override
@@ -168,5 +193,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        unbindService(serviceConnection);
+    }
+
+    private ServiceConnection serviceConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            CountStepService.CountStepBinder binder = (CountStepService.CountStepBinder) service;
+            CountStepService countService = binder.getService();
+            if (countService != null) {
+                if (countStepChanged != null) {
+                    LogUtil.d(TAG, "Count Step Service -> onServiceConnected() step:" + countService.getStep());
+                    countStepChanged.updateStep(countService.getStep());
+                }
+            }
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            LogUtil.d(TAG, "Count Step Service -> onServiceDisconnected()");
+        }
+    };
+
+    public interface OnCountStepChanged {
+        void updateStep(int step);
     }
 }
