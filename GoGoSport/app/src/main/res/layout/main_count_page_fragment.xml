@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="90dp"
     tools:context=".main.mainpage.CountPageFragment">
 
     <LinearLayout
@@ -111,5 +112,13 @@
             android:textColor="@color/count_step_page_unit_text_color"
             android:textSize="@dimen/count_step_page_common_text_size"/>
     </LinearLayout>
+
+    <com.ls.gogosport.component.view.LineChartView
+        android:id="@+id/step_line_chart_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/count_step_line_view_height"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
