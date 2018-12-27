@@ -17,6 +17,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.ls.gogosport.R;
+import com.ls.gogosport.component.rxmanager.RxCommonOperator;
 import com.ls.gogosport.main.mainpage.CountPageFragment;
 import com.ls.gogosport.main.mainpage.SportPageFragment;
 import com.ls.gogosport.main.mainpage.UserPageFragment;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //FragmentManager
     private FragmentManager fragmentManager;
+    private Fragment countStepFragment;
 
     private TextView titleText;
 
@@ -122,9 +124,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     private void initPage() {
         StatusBarUtil.setStatusBarColor(this, R.color.title_bar_bg);
+        if (countStepFragment == null) {
+            countStepFragment = CountPageFragment.newInstance();
+        }
         FragmentTransaction ft = fragmentManager.beginTransaction();
-        ft.add(R.id.page_fragment_container, CountPageFragment.newInstance());
+        ft.add(R.id.page_fragment_container, countStepFragment);
         ft.commit();
+        RxCommonOperator.getInstance().registerTimeCounter();
     }
 
     /**
@@ -152,7 +158,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             setTitleBar(countPageTitle);
             setTabStatus(true, false, false);
             //启动计步页面
-            changePage(CountPageFragment.newInstance());
+            changePage(countStepFragment);
             return;
         }
 
